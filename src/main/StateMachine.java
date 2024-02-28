@@ -6,7 +6,9 @@ import main.metamodel.Transition;
 
 public class StateMachine {
 
+    // The machine holds the entire state machine configuration including all states, transitions, and variables
     private Machine machine = new Machine();
+    // The currentState keeps track of the state that the state machine is in at the given moment
     private State currentState;
     private Transition currentTransition;
 
@@ -28,6 +30,7 @@ public class StateMachine {
         return this;
     }
 
+    // When the state machine starts running, it will start in this state
     public StateMachine initial() {
         if (currentState != null) {
             machine.setInitialState(currentState);
