@@ -44,7 +44,7 @@ public class StateMachine {
 
     public StateMachine to(String targetStateName) {
         if (currentTransition == null) {
-            throw new IllegalStateException("No transition defined. Please define a transition before setting its target state.");
+            throw new IllegalStateException("No transition defined. It needs to be defined before setting the target state.");
         }
         State targetState = machine.getState(targetStateName);
         if (targetState == null) {
@@ -88,7 +88,7 @@ public class StateMachine {
 
     public StateMachine ifEquals(String variableName, int value) {
         if (currentTransition == null) {
-            throw new IllegalStateException("Condition setting requires an active transition.");
+            throw new IllegalStateException("It requires an active transition.");
         }
         currentTransition.setConditionEquals(variableName, value);
         return this;
@@ -96,7 +96,7 @@ public class StateMachine {
 
     public StateMachine ifGreaterThan(String variableName, int value) {
         if (currentTransition == null) {
-            throw new IllegalStateException("Condition setting requires an active transition.");
+            throw new IllegalStateException("It requires an active transition.");
         }
         currentTransition.setConditionGreaterThan(variableName, value);
         return this;
@@ -104,7 +104,7 @@ public class StateMachine {
 
     public StateMachine ifLessThan(String variableName, int value) {
         if (currentTransition == null) {
-            throw new IllegalStateException("Condition setting requires an active transition.");
+            throw new IllegalStateException("It requires an active transition.");
         }
         currentTransition.setConditionLessThan(variableName, value);
         return this;
