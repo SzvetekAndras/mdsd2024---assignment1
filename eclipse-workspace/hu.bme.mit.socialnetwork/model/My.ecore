@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="socialNetworkPackage" nsURI="hu.bme.mit.socialnetwork" nsPrefix="hu.bme.mit.socialnetwork">
+  <eClassifiers xsi:type="ecore:EClass" name="SocialNetwork">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="people" upperBound="-1"
+        eType="#//Person" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="snname" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Person">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" upperBound="2"
+        eType="#//Person"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="posts" upperBound="-1"
+        eType="#//Post" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="personname" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="comment" upperBound="-1"
+        eType="#//Comment" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="page" upperBound="-1" eType="#//Page"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="0" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Email" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="group" upperBound="-1"
+        eType="#//Group" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="likes" upperBound="-1"
+        eType="#//Likes" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Post">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="comment" upperBound="-1"
+        eType="#//Comment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="likes" upperBound="-1"
+        eType="#//Likes"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posttext" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Event">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventname" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="post" upperBound="-1" eType="#//Post"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Page">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pagename" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="post" upperBound="-1" eType="#//Post"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="event" upperBound="-1"
+        eType="#//Event" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Comment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="likes" upperBound="-1"
+        eType="#//Likes"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="commenttext" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Group">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="groupname" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="event" upperBound="-1"
+        eType="#//Event" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="post" upperBound="-1" eType="#//Post"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Likes">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

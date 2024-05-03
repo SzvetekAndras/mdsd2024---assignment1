@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ASCII"?>
+<hu.bme.mit.socialnetwork:SocialNetwork
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:hu.bme.mit.socialnetwork="hu.bme.mit.socialnetwork"
+    snname="facebook">
+  <people parent="1321434asd"
+      personname="andi"
+      Id="465713as"
+      Email="amail@mail.a">
+    <posts comment="//@people.1/@comment.0"
+        likes="//@people.0/@likes.2"
+        posttext="look at this"/>
+    <group groupname="sonice group"/>
+    <likes type="smile"/>
+    <likes type="hally"/>
+    <likes type="happy"/>
+  </people>
+  <people personname="b&#xe9;la"
+      Id="1321434asd"
+      Email="sd@almma">
+    <comment
+        likes="//@people.0/@likes.1"
+        commenttext="woow"/>
+  </people>
+  <people parent="465713as 1321434asd"
+      personname="jucus"
+      Id="bela"
+      Email="jucus@gmail">
+    <comment
+        commenttext=" this is cool"/>
+    <page pagename="weird things">
+      <post
+          comment="//@people.2/@comment.0"
+          likes="//@people.0/@likes.0 //@people.3/@likes.0 //@people.5/@likes.0"
+          posttext="this is weird"/>
+      <event
+          eventname="We look at weird thing on friday">
+        <post
+            comment="//@people.5/@comment.0"
+            likes="//@people.4/@likes.0 //@people.5/@likes.1"
+            posttext="Are you ready for the weird things"/>
+      </event>
+    </page>
+    <likes type="107"/>
+    <likes type="coolio"/>
+  </people>
+  <people personname=" peti"
+      Id="peti63"
+      Email="peti@">
+    <likes type="108"/>
+  </people>
+  <people personname="gizi"
+      Id="gizi58"
+      Email="gizi@mailo">
+    <likes type="115"/>
+  </people>
+  <people personname="jozsi"
+      Id="jozsib"
+      Email="jozsi@gmail">
+    <comment
+        likes="//@people.2/@likes.0"
+        commenttext="so ready"/>
+    <likes type="108"/>
+    <likes type="care"/>
+  </people>
+  <people personname="as"
+      Email="as"/>
+</hu.bme.mit.socialnetwork:SocialNetwork>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/hu.bme.mit.socialnetwork/src" modelPluginID="hu.bme.mit.socialnetwork"
+    modelName="My" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>My.ecore</foreignModel>
+  <genPackages prefix="SocialNetworkPackage" disposableProviderFactory="true" ecorePackage="My.ecore#/">
+    <genClasses ecoreClass="My.ecore#//SocialNetwork">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference My.ecore#//SocialNetwork/people"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute My.ecore#//SocialNetwork/snname"/>
+    </genClasses>
+    <genClasses ecoreClass="My.ecore#//Person">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference My.ecore#//Person/parent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference My.ecore#//Person/posts"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute My.ecore#//Person/personname"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference My.ecore#//Person/comment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference My.ecore#//Person/page"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute My.ecore#//Person/Id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute My.ecore#//Person/Email"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference My.ecore#//Person/group"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference My.ecore#//Person/likes"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="My.ecore#//Post">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference My.ecore#//Post/comment"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference My.ecore#//Post/likes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute My.ecore#//Post/posttext"/>
+    </genClasses>
+    <genClasses ecoreClass="My.ecore#//Event">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute My.ecore#//Event/eventname"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference My.ecore#//Event/post"/>
+    </genClasses>
+    <genClasses ecoreClass="My.ecore#//Page">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute My.ecore#//Page/pagename"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference My.ecore#//Page/post"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference My.ecore#//Page/event"/>
+    </genClasses>
+    <genClasses ecoreClass="My.ecore#//Comment">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference My.ecore#//Comment/likes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute My.ecore#//Comment/commenttext"/>
+    </genClasses>
+    <genClasses ecoreClass="My.ecore#//Group">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute My.ecore#//Group/groupname"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference My.ecore#//Group/event"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference My.ecore#//Group/post"/>
+    </genClasses>
+    <genClasses ecoreClass="My.ecore#//Likes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute My.ecore#//Likes/type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
